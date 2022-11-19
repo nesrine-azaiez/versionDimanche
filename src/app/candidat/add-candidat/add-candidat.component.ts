@@ -1,12 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Candidat} from '../../core/model/candidat';
 import {CandidatService} from '../../services/candidat.service';
-// @ts-ignore
-import {MatSnackBar} from '@angular/material/snack-bar';
 import {Router} from '@angular/router';
 import {TokenStorageService} from '../../_services/token-storage.service';
-// import {NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels} from 'ngx-qrcode2';
-
 class User {
 }
 

@@ -1,3 +1,4 @@
+// @ts-ignore
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddCandidatComponent } from './add-candidat.component';
