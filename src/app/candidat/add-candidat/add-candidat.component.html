@@ -7,14 +7,14 @@
 
 
     <div class="col-sm-4 col-md-4 col-lg-4" >
-      <label >Date of Appointment</label>
-      <input type="date" [(ngModel)]= "candidat.dateN" name="DateApp" class="form-control">
+      <label >Nom</label>
+      <input type="text" class="form-control" #nom="ngModel" id="nom" [(ngModel)]="candidat.nom" name="DateApp" placeholder="Nom">
     </div>
 
 
     <div class="col-sm-2 col-md-2 col-lg-2">
-      <label >Remark</label>
-      <input type="text" [(ngModel)]= "candidat.prenom" name="prenom" class="form-control">
+      <label >Prenom</label>
+      <input type="text" class="form-control" #prenom="ngModel" id="prenom" [(ngModel)]="candidat.prenom" name="prenom"  placeholder="Prenom">
     </div>
 
 <!-------------------------------------------------->

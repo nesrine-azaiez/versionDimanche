@@ -4,6 +4,7 @@ import {CandidatService} from '../../services/candidat.service';
 // @ts-ignore
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {Router} from '@angular/router';
+import {TokenStorageService} from '../../_services/token-storage.service';
 // import {NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels} from 'ngx-qrcode2';
 
 class User {
@@ -17,19 +18,22 @@ class User {
 export class AddCandidatComponent implements OnInit {
 
   listCandidat: Candidat[];
-  @Input() candidat = new Candidat();
+  candidat = new Candidat();
   idC: number;
 
-  constructor(private services: CandidatService, private router: Router /*private snackbar: MatSnackBar*/) {
+  currentUser: any;
+
+  constructor(private services: CandidatService, private token: TokenStorageService, private router: Router /*private snackbar: MatSnackBar*/) {
   }
 
   ngOnInit(): void {
+    this.currentUser = this.token.getUser();
   }
 
 
   // tslint:disable-next-line:typedef
   addCandidacy(){
-    this.services.addCandidacy(this.candidat, ).subscribe(candidat => {
+    this.services.addCandidacy(this.candidat, this.currentUser.id).subscribe(candidat => {
       console.log(candidat);
 
     });
