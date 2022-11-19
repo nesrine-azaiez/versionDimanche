@@ -19,7 +19,7 @@ export class CandidatService {
     return this.http.get<Candidat[]>('http://localhost:8080/SearchMultiple/' + key);
   }
 
-  addCandidacy(candidat: Candidat, idU: number): Observable<Candidat>{
+  addCandidacy(candidat: Candidat, idU: number ): Observable<Candidat>{
     return this.http.post<Candidat>(this.addcUrl + idU, candidat);
   }
 

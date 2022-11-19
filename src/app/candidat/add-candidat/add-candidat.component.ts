@@ -18,7 +18,7 @@ class User {
 export class AddCandidatComponent implements OnInit {
 
   listCandidat: Candidat[];
-  candidat = new Candidat();
+  public candidat = new Candidat();
   idC: number;
 
   currentUser: any;
